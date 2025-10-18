@@ -1,36 +1,178 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MapleGuard Insurance Website
+
+A modern, accessible insurance website built with Next.js, TypeScript, and TailwindCSS.
+
+## Features
+
+- **Modern Design**: Clean, professional design with mobile-first responsive layout
+- **Accessibility**: WCAG 2.2 AA compliant with keyboard navigation and screen reader support
+- **Performance**: Optimized for Core Web Vitals with fast loading times
+- **SEO**: Comprehensive SEO with meta tags, JSON-LD structured data, and sitemap
+- **Multi-step Forms**: Interactive quote forms with validation and progress tracking
+- **Product Pages**: Detailed product pages for Auto, Home, Life, Travel, and Business insurance
+- **Legal Pages**: Privacy Policy, Terms of Service, and Accessibility Statement
+- **Contact & Support**: Contact forms, FAQ, and claims center
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **UI Components**: Custom component library with Radix UI primitives
+- **Forms**: React Hook Form with Zod validation
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Theme**: Light/Dark mode support with next-themes
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.17.0 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/mapleguard-insurance.git
+cd mapleguard-insurance
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create environment variables:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Update the environment variables in `.env.local` with your actual values.
 
-## Learn More
+5. Run the development server:
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── about/             # About page
+│   ├── claims/            # Claims center
+│   ├── contact/           # Contact page
+│   ├── faq/               # FAQ page
+│   ├── products/          # Product pages
+│   │   ├── auto/          # Auto insurance
+│   │   ├── home/          # Home insurance
+│   │   ├── life/          # Life insurance
+│   │   ├── travel/        # Travel insurance
+│   │   └── business/      # Business insurance
+│   ├── privacy/           # Privacy policy
+│   ├── terms/             # Terms of service
+│   ├── accessibility/     # Accessibility statement
+│   ├── quotes/            # Quote form
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── not-found.tsx      # 404 page
+│   └── sitemap.ts         # Sitemap generation
+├── components/            # React components
+│   ├── ui/               # UI component library
+│   ├── sections/         # Page sections
+│   ├── forms/            # Form components
+│   ├── navigation.tsx    # Navigation component
+│   ├── footer.tsx        # Footer component
+│   └── json-ld.tsx       # Structured data
+├── data/                 # Static data
+│   └── products.ts       # Product information
+├── lib/                  # Utility functions
+│   ├── utils.ts          # Common utilities
+│   └── design-tokens.ts  # Design system tokens
+└── types/                # TypeScript types
+    └── index.ts          # Type definitions
+```
 
-## Deploy on Vercel
+## Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Design System
+
+The project uses a comprehensive design system with:
+
+- **Colors**: Primary blue, accent green, and neutral grays
+- **Typography**: Inter font family with consistent sizing
+- **Spacing**: 4px baseline grid system
+- **Components**: Reusable UI components with variants
+- **Animations**: Subtle, purposeful animations with reduced motion support
+
+## Accessibility
+
+The website is built with accessibility in mind:
+
+- Semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Screen reader compatibility
+- High contrast ratios
+- Focus management
+- Skip navigation links
+
+## SEO Features
+
+- Meta tags for all pages
+- Open Graph and Twitter Card support
+- JSON-LD structured data
+- XML sitemap generation
+- robots.txt configuration
+- Canonical URLs
+- Performance optimization
+
+## Performance
+
+- Image optimization with Next.js Image component
+- Font optimization with next/font
+- Code splitting and lazy loading
+- Core Web Vitals optimization
+- Lighthouse score optimization
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For support, email hello@mapleguard.ca or call 1-800-MAPLE-01.
+
+## Acknowledgments
+
+- Next.js team for the amazing framework
+- TailwindCSS for the utility-first CSS framework
+- Radix UI for accessible component primitives
+- Lucide for the beautiful icon set
+- Framer Motion for smooth animations
