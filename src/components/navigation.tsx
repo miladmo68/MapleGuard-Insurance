@@ -4,22 +4,22 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Shield, 
-  Car, 
-  Home, 
-  Heart, 
-  Plane, 
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Shield,
+  Car,
+  Home,
+  Heart,
+  Plane,
   Briefcase,
   Phone,
   MapPin,
   Users,
   FileText,
   HelpCircle,
-  Briefcase as BriefcaseIcon
+  Briefcase as BriefcaseIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -33,8 +33,12 @@ const navigation = [
       { name: "Home Insurance", href: "/products/home", icon: Home },
       { name: "Life Insurance", href: "/products/life", icon: Heart },
       { name: "Travel Insurance", href: "/products/travel", icon: Plane },
-      { name: "Business Insurance", href: "/products/business", icon: Briefcase },
-    ]
+      {
+        name: "Business Insurance",
+        href: "/products/business",
+        icon: Briefcase,
+      },
+    ],
   },
   { name: "Quotes", href: "/quotes", icon: FileText },
   { name: "Claims", href: "/claims", icon: Shield },
@@ -77,12 +81,14 @@ export function Navigation() {
     <>
       {/* Desktop Navigation */}
       <nav className="hidden lg:block sticky top-0 z-50">
-        <div className={cn(
-          "transition-all duration-300",
-          isScrolled 
-            ? "bg-white/95 backdrop-blur-md shadow-soft border-b border-neutral-200" 
-            : "bg-transparent"
-        )}>
+        <div
+          className={cn(
+            "transition-all duration-300",
+            isScrolled
+              ? "bg-white/95 backdrop-blur-md shadow-soft border-b border-neutral-200"
+              : "bg-transparent"
+          )}
+        >
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
@@ -139,9 +145,7 @@ export function Navigation() {
 
               {/* CTA Button */}
               <Button asChild size="sm">
-                <Link href="/quotes">
-                  Get a Quote
-                </Link>
+                <Link href="/quotes">Get a Quote</Link>
               </Button>
             </div>
           </div>
@@ -150,12 +154,14 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       <nav className="lg:hidden sticky top-0 z-50">
-        <div className={cn(
-          "transition-all duration-300",
-          isScrolled 
-            ? "bg-white/95 backdrop-blur-md shadow-soft border-b border-neutral-200" 
-            : "bg-white shadow-soft"
-        )}>
+        <div
+          className={cn(
+            "transition-all duration-300",
+            isScrolled
+              ? "bg-white/95 backdrop-blur-md shadow-soft border-b border-neutral-200"
+              : "bg-white shadow-soft"
+          )}
+        >
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
@@ -175,7 +181,11 @@ export function Navigation() {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </Button>
             </div>
           </div>
