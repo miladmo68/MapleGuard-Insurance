@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { 
   Menu, 
   X, 
@@ -19,7 +18,8 @@ import {
   MapPin,
   Users,
   FileText,
-  HelpCircle
+  HelpCircle,
+  Briefcase as BriefcaseIcon
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -40,6 +40,7 @@ const navigation = [
   { name: "Claims", href: "/claims", icon: Shield },
   { name: "Agents", href: "/agents", icon: Users },
   { name: "Locations", href: "/locations", icon: MapPin },
+  { name: "Careers", href: "/careers", icon: BriefcaseIcon },
   { name: "FAQ", href: "/faq", icon: HelpCircle },
   { name: "Contact", href: "/contact", icon: Phone },
 ];
