@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <main id="main-content">
       <Hero />
-      {/* <ProductsGrid /> */}
+      <ProductsGrid />
       <WhyChooseUs />
       <HowClaimsWork />
       <Discounts />
