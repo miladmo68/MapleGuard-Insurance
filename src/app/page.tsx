@@ -53,7 +53,7 @@ export default function Home() {
       {/* <ProductsGrid /> */}
       {/* <WhyChooseUs /> */}
       {/* <HowClaimsWork /> */}
-      {/* <Discounts /> */}
+      <Discounts />
       <Testimonials />
       <FAQ faqs={homeFaqs} />
       <CTABanner />
