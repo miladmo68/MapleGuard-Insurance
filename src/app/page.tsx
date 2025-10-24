@@ -55,7 +55,7 @@ export default function Home() {
       {/* <HowClaimsWork /> */}
       {/* <Discounts /> */}
       {/* <Testimonials /> */}
-      {/* <FAQ faqs={homeFaqs} /> */}
+      <FAQ faqs={homeFaqs} />
       <CTABanner />
     </main>
   );
