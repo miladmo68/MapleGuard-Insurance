@@ -51,8 +51,8 @@ export default function Home() {
     <main id="main-content">
       {/* <Hero /> */}
       {/* <ProductsGrid /> */}
-      {/* <WhyChooseUs /> */}
-      {/* <HowClaimsWork /> */}
+      <WhyChooseUs />
+      <HowClaimsWork />
       <Discounts />
       <Testimonials />
       <FAQ faqs={homeFaqs} />
