@@ -49,14 +49,14 @@ const homeFaqs = [
 export default function Home() {
   return (
     <main id="main-content">
-      <Hero />
-      <ProductsGrid />
-      <WhyChooseUs />
-      <HowClaimsWork />
-      <Discounts />
-      <Testimonials />
-      <FAQ faqs={homeFaqs} />
-      <CTABanner />
+      {/* <Hero /> */}
+      {/* <ProductsGrid /> */}
+      {/* <WhyChooseUs /> */}
+      {/* <HowClaimsWork /> */}
+      {/* <Discounts /> */}
+      {/* <Testimonials /> */}
+      {/* <FAQ faqs={homeFaqs} /> */}
+      {/* <CTABanner /> */}
     </main>
   );
 }
