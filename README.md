@@ -1,178 +1,77 @@
-# MapleGuard Insurance Website
+<div align="center">
 
-A modern, accessible insurance website built with Next.js, TypeScript, and TailwindCSS.
+# 🍁 MapleGuard Insurance
 
-## Features
+A modern, accessible insurance website for a Canadian provider, with product pages, a multi-step quote flow, claims information and agent locations.
 
-- **Modern Design**: Clean, professional design with mobile-first responsive layout
-- **Accessibility**: WCAG 2.2 AA compliant with keyboard navigation and screen reader support
-- **Performance**: Optimized for Core Web Vitals with fast loading times
-- **SEO**: Comprehensive SEO with meta tags, JSON-LD structured data, and sitemap
-- **Multi-step Forms**: Interactive quote forms with validation and progress tracking
-- **Product Pages**: Detailed product pages for Auto, Home, Life, Travel, and Business insurance
-- **Legal Pages**: Privacy Policy, Terms of Service, and Accessibility Statement
-- **Contact & Support**: Contact forms, FAQ, and claims center
+<a href="https://miladmo68.github.io/MapleGuard-Insurance/"><img src="https://img.shields.io/badge/Live_Demo-Open_Site-FF6A00?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo"></a>
+<a href="https://github.com/miladmo68/MapleGuard-Insurance"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source code"></a>
+<a href="https://miladweb.com"><img src="https://img.shields.io/badge/Portfolio-miladweb.com-1E3A8A?style=for-the-badge&logo=aboutdotme&logoColor=white" alt="Portfolio"></a>
 
-## Tech Stack
+**🔗 Live:** [miladmo68.github.io/MapleGuard-Insurance](https://miladmo68.github.io/MapleGuard-Insurance/)
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: TailwindCSS
-- **UI Components**: Custom component library with Radix UI primitives
-- **Forms**: React Hook Form with Zod validation
-- **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Theme**: Light/Dark mode support with next-themes
+</div>
 
-## Getting Started
+<p align="center">
+  <img src="./.github/preview.jpg" alt="MapleGuard Insurance screenshot" width="100%" />
+</p>
 
-### Prerequisites
+## ✨ Features
 
-- Node.js 18.17.0 or higher
-- npm or yarn
+- Auto, home, life and business product pages
+- Multi-step quote form with React Hook Form and Zod
+- Claims, agents, locations, careers and FAQ pages
+- Accessibility page and structured data for SEO
+- Static export deployed to GitHub Pages
 
-### Installation
+## 🛠️ Tech Stack
 
-1. Clone the repository:
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white) ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white) ![Zod](https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white) ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
+
+## 🚀 Getting Started
+
+**Prerequisites:** [Node.js](https://nodejs.org/) 18 or newer
+
+**Install and run**
+
 ```bash
-git clone https://github.com/your-username/mapleguard-insurance.git
-cd mapleguard-insurance
-```
-
-2. Install dependencies:
-```bash
+git clone https://github.com/miladmo68/MapleGuard-Insurance.git
+cd MapleGuard-Insurance
 npm install
-```
-
-3. Create environment variables:
-```bash
-cp .env.example .env.local
-```
-
-4. Update the environment variables in `.env.local` with your actual values.
-
-5. Run the development server:
-```bash
 npm run dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Environment variables
 
-## Project Structure
+Create a `.env` file (or `.env.local` for Next.js) with:
 
-```
-src/
-├── app/                    # Next.js App Router pages
-│   ├── about/             # About page
-│   ├── claims/            # Claims center
-│   ├── contact/           # Contact page
-│   ├── faq/               # FAQ page
-│   ├── products/          # Product pages
-│   │   ├── auto/          # Auto insurance
-│   │   ├── home/          # Home insurance
-│   │   ├── life/          # Life insurance
-│   │   ├── travel/        # Travel insurance
-│   │   └── business/      # Business insurance
-│   ├── privacy/           # Privacy policy
-│   ├── terms/             # Terms of service
-│   ├── accessibility/     # Accessibility statement
-│   ├── quotes/            # Quote form
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Home page
-│   ├── not-found.tsx      # 404 page
-│   └── sitemap.ts         # Sitemap generation
-├── components/            # React components
-│   ├── ui/               # UI component library
-│   ├── sections/         # Page sections
-│   ├── forms/            # Form components
-│   ├── navigation.tsx    # Navigation component
-│   ├── footer.tsx        # Footer component
-│   └── json-ld.tsx       # Structured data
-├── data/                 # Static data
-│   └── products.ts       # Product information
-├── lib/                  # Utility functions
-│   ├── utils.ts          # Common utilities
-│   └── design-tokens.ts  # Design system tokens
-└── types/                # TypeScript types
-    └── index.ts          # Type definitions
+```env
+NEXT_PUBLIC_GOOGLE_VERIFICATION=
+NEXT_PUBLIC_SITE_URL=
 ```
 
-## Available Scripts
+## 📁 Project Structure
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
+```
+MapleGuard-Insurance/
+├── public/
+├── src/
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── ProjectContext.md
+├── tailwind.config.ts
+└── tsconfig.json
+```
 
-## Design System
+## 👤 Author
 
-The project uses a comprehensive design system with:
+**Milad Mohammadi** — Frontend-Focused Full-Stack Developer, Toronto 🇨🇦
 
-- **Colors**: Primary blue, accent green, and neutral grays
-- **Typography**: Inter font family with consistent sizing
-- **Spacing**: 4px baseline grid system
-- **Components**: Reusable UI components with variants
-- **Animations**: Subtle, purposeful animations with reduced motion support
+[![Website](https://img.shields.io/badge/Website-miladweb.com-FF6A00?style=flat-square&logo=googlechrome&logoColor=white)](https://miladweb.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-miladmo68-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miladmo68/)
+[![GitHub](https://img.shields.io/badge/GitHub-miladmo68-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/miladmo68)
 
-## Accessibility
-
-The website is built with accessibility in mind:
-
-- Semantic HTML structure
-- ARIA labels and roles
-- Keyboard navigation support
-- Screen reader compatibility
-- High contrast ratios
-- Focus management
-- Skip navigation links
-
-## SEO Features
-
-- Meta tags for all pages
-- Open Graph and Twitter Card support
-- JSON-LD structured data
-- XML sitemap generation
-- robots.txt configuration
-- Canonical URLs
-- Performance optimization
-
-## Performance
-
-- Image optimization with Next.js Image component
-- Font optimization with next/font
-- Code splitting and lazy loading
-- Core Web Vitals optimization
-- Lighthouse score optimization
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support, email hello@mapleguard.ca or call 1-800-MAPLE-01.
-
-## Acknowledgments
-
-- Next.js team for the amazing framework
-- TailwindCSS for the utility-first CSS framework
-- Radix UI for accessible component primitives
-- Lucide for the beautiful icon set
-- Framer Motion for smooth animations
+<p align="center"><sub>If you like this project, consider giving it a ⭐</sub></p>

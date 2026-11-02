@@ -27,7 +27,7 @@ const quoteSchema = z.object({
     dateOfBirth: z.string().min(1, "Please enter your date of birth"),
     postalCode: z.string().min(6, "Please enter a valid postal code"),
   }),
-  riskDetails: z.record(z.any()),
+  riskDetails: z.record(z.string(), z.any()),
   coverageLevel: z.string().min(1, "Please select a coverage level"),
   addOns: z.array(z.string()),
   additionalInfo: z.string().optional(),
